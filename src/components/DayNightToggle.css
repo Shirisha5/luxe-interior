@@ -1,0 +1,109 @@
+.daynight-toggle-wrapper {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.daynight-toggle-wrapper.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.daynight-pill-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  background-color: rgba(242, 240, 234, 0.72);
+  border: 1px solid rgba(26, 42, 58, 0.12);
+  border-radius: 9999px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(26, 42, 58, 0.08),
+              0 2px 8px rgba(26, 42, 58, 0.04);
+}
+
+.daynight-btn {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.25rem;
+  border: none;
+  background: transparent;
+  color: rgba(26, 42, 58, 0.65);
+  font-family: var(--font-primary, 'Poppins', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 9999px;
+  transition: color 0.35s ease;
+  user-select: none;
+}
+
+.daynight-btn:hover {
+  color: var(--theme-ink-blue, #1A2A3A);
+}
+
+.daynight-btn.active {
+  color: #f2f0ea;
+}
+
+.daynight-icon {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.daynight-btn.active .daynight-icon {
+  transform: scale(1.1);
+}
+
+.daynight-slider {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  background: linear-gradient(135deg, var(--theme-accent, #A83226), #8a241a);
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(168, 50, 38, 0.4);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.daynight-slider.slider-day {
+  transform: translateX(0);
+  background: linear-gradient(135deg, var(--theme-accent, #A83226), #8a241a);
+}
+
+.daynight-slider.slider-night {
+  transform: translateX(100%);
+  background: linear-gradient(135deg, var(--theme-accent, #A83226), #8a241a);
+}
+
+@media (max-width: 768px) {
+  .daynight-toggle-wrapper {
+    bottom: 1.5rem;
+  }
+  .daynight-btn {
+    padding: 0.5rem 1.05rem;
+    font-size: 0.68rem;
+    min-height: 42px;
+    box-sizing: border-box;
+  }
+  .daynight-icon {
+    width: 13px;
+    height: 13px;
+  }
+}

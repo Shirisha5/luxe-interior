@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap');
+
+/**
+ * Global CSS Theme Variables (60 - 30 - 10 Rule)
+ * Modify here to change CSS styles across all components
+ */
+:root {
+  /* Typography Variables */
+  --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-logo: 'Cormorant Garamond', serif;
+  --font-hero-title: 'Syne', sans-serif;
+
+  /* Background (60%): Warm Parchment */
+  --theme-bg: #f2f0ea;
+
+  /* Wireframes, Text, & Logo (30%): Deep Ink Blue */
+  --theme-ink-blue: #1A2A3A;
+  --theme-ink-blue-muted: rgba(26, 42, 58, 0.65);
+  --theme-ink-blue-subtle: rgba(26, 42, 58, 0.15);
+
+  /* 2D/3D Toggle Button & CTAs (10%): Rich Crimson Accent */
+  --theme-accent: #A83226;
+  --theme-accent-hover: #8D251A;
+  --theme-accent-glow: rgba(168, 50, 38, 0.2);
+}

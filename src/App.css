@@ -1,0 +1,29 @@
+/* Application Layout Styles */
+.canvas-fixed-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 1;
+  pointer-events: none;
+  background-color: var(--theme-bg, #f2f0ea);
+  transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.canvas-fixed-container.night-canvas {
+  background-color: #0c131d;
+}
+
+.canvas-element {
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+
+/* Total scroll track height accommodating Blueprint, Materialization, Sanctuary, and Day/Night mode */
+.scroll-track {
+  position: relative;
+  height: 480vh;
+  pointer-events: none;
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <!-- House Roof & Body Outline -->
+  <path d="M12 3 L3.5 10.5 H6 V20.5 H18 V10.5 H20.5 Z" />
+  
+  <!-- Centered Door -->
+  <path d="M10 20.5 V14 H14 V20.5" />
+</svg>
